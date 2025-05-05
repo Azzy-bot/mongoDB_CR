@@ -1,0 +1,92 @@
+"fixture_mid","season","competition_name","fixture_datetime","fixture_round","home_team","away_team"
+ce9f02ca-6f64-4037-96b1-abadee2cef28,"2022",Super Rugby Pacific,2022-02-18 08:45:00.000,"1",NSW Waratahs,Fijian Drua
+"4e966c45-e72c-486a-a99d-636d3f06571a","2022",Super Rugby Pacific,2022-02-19 03:35:00.000,"1",Chiefs,Highlanders
+"0746e3f2-bdad-4b2d-aa05-dbf04ee8786c","2022",Super Rugby Pacific,2022-02-19 06:05:00.000,"1",Crusaders,Hurricanes
+bb59444f-657f-418d-8f30-d140fd9726f2,"2022",Super Rugby Pacific,2022-02-19 08:45:00.000,"1",Reds,Melbourne Rebels
+"0895b32a-bda9-42a4-964a-06e789d2264b","2022",Super Rugby Pacific,2022-02-20 03:00:00.000,"1",Brumbies,Western Force
+"2cac8775-f9e6-48ce-948a-5f13698e3703","2022",Super Rugby Pacific,2022-02-25 06:05:00.000,"2",Highlanders,Crusaders
+"1ecbb577-028a-4df2-a703-fd963f55c1e2","2022",Super Rugby Pacific,2022-02-25 08:45:00.000,"2",NSW Waratahs,Reds
+"4571c894-0adf-40ff-8782-f10f54436977","2022",Super Rugby Pacific,2022-02-26 03:35:00.000,"2",Brumbies,Fijian Drua
+"1f0f6046-caaa-40f3-9da2-6193cf0b3032","2022",Super Rugby Pacific,2022-02-26 06:05:00.000,"2",Blues,Hurricanes
+"1708daa0-bac2-4c04-8cef-af90e2463210","2022",Super Rugby Pacific,2022-02-26 08:45:00.000,"2",Melbourne Rebels,Western Force
+cc639b36-f003-4a92-ba49-74b96d7d2a28,"2022",Super Rugby Pacific,2022-03-04 06:05:00.000,"3",Moana Pasifika,Crusaders
+"6a8f3c43-de25-4251-aa67-04c49b8ca1a8","2022",Super Rugby Pacific,2022-03-04 08:45:00.000,"3",Fijian Drua,Melbourne Rebels
+"58c8c426-de60-4513-8657-2fae3ef5aeb0","2022",Super Rugby Pacific,2022-03-04 11:00:00.000,"3",Western Force,Reds
+"05c4a6c9-a8dd-4796-ae42-f5117deb0134","2022",Super Rugby Pacific,2022-03-05 03:35:00.000,"3",Blues,Chiefs
+"87eb2df7-f35f-44dd-b840-8be50b32b31a","2022",Super Rugby Pacific,2022-03-05 06:05:00.000,"3",Hurricanes,Highlanders
+"84765e6b-1bfd-46a6-a4a5-fbe02dfcb6e5","2022",Super Rugby Pacific,2022-03-05 08:45:00.000,"3",Brumbies,NSW Waratahs
+b1bdbe7d-0d17-44ea-9219-48b7b0f875cb,"2022",Super Rugby Pacific,2022-03-11 06:05:00.000,"4",Blues,Highlanders
+"095f2848-ec2b-4af9-8e1f-1407cb5a54d3","2022",Super Rugby Pacific,2022-03-11 08:45:00.000,"4",Melbourne Rebels,Brumbies
+"8f954929-507f-4fb5-b473-582762503a5f","2022",Super Rugby Pacific,2022-03-12 06:05:00.000,"4",Crusaders,Chiefs
+"777e7116-c768-4cd8-8486-bf1ebb150669","2022",Super Rugby Pacific,2022-03-12 08:45:00.000,"4",Reds,Fijian Drua
+"238c729b-445c-4c5a-88ba-15db265a960d","2022",Super Rugby Pacific,2022-03-13 03:00:00.000,"4",NSW Waratahs,Western Force
+a66d7d22-64b3-431e-8d19-9653721752a8,"2022",Super Rugby Pacific,2022-03-18 08:45:00.000,"5",Brumbies,Reds
+"4d746452-6f7f-4d03-bd04-e0acbd18997d","2022",Super Rugby Pacific,2022-03-19 03:35:00.000,"5",Fijian Drua,Western Force
+f27a9320-65c4-4948-8f2b-a22e7ca2b7bd,"2022",Super Rugby Pacific,2022-03-19 06:05:00.000,"5",Moana Pasifika,Chiefs
+c51b72e8-49c0-474c-81ea-568f92f3f83e,"2022",Super Rugby Pacific,2022-03-19 08:45:00.000,"5",NSW Waratahs,Melbourne Rebels
+ead68b0d-9635-4873-93cc-c8c888c81da0,"2022",Super Rugby Pacific,2022-03-25 06:05:00.000,"6",Moana Pasifika,Hurricanes
+"1bc446d3-316f-45d9-92d6-576c527b9adb","2022",Super Rugby Pacific,2022-03-25 08:45:00.000,"6",Melbourne Rebels,Fijian Drua
+"40718dac-e711-45c0-8acd-4c9cbd7fcb9a","2022",Super Rugby Pacific,2022-03-25 11:00:00.000,"6",Western Force,Brumbies
+"46863aa0-9df3-4fc5-9a8f-e3a6b6019b00","2022",Super Rugby Pacific,2022-03-26 03:35:00.000,"6",Highlanders,Blues
+"74f8195e-01ea-4365-a7ca-243729bb44d4","2022",Super Rugby Pacific,2022-03-26 06:05:00.000,"6",Chiefs,Crusaders
+e1e388b7-3569-41ed-9a83-1b1f280ddc15,"2022",Super Rugby Pacific,2022-03-26 08:45:00.000,"6",Reds,NSW Waratahs
+f78e28cf-3759-437c-a799-4421a2a19197,"2022",Super Rugby Pacific,2022-03-29 06:05:00.000,"7",Moana Pasifika,Blues
+"53544dcb-68e1-44c2-858f-20db8b0c5264","2022",Super Rugby Pacific,2022-04-01 06:05:00.000,"7",Crusaders,Highlanders
+"3a66171d-9a06-47ea-b24f-b3e137b23419","2022",Super Rugby Pacific,2022-04-01 08:45:00.000,"7",Fijian Drua,NSW Waratahs
+"2a89e44f-72ee-4ed3-9d48-fa6abed13480","2022",Super Rugby Pacific,2022-04-02 06:05:00.000,"7",Blues,Moana Pasifika
+f1723880-844d-489c-80fb-963fdf0afac7,"2022",Super Rugby Pacific,2022-04-02 08:45:00.000,"7",Reds,Brumbies
+"39a1f83d-58cd-4d92-9b2b-0aa1d5702da2","2022",Super Rugby Pacific,2022-04-03 03:35:00.000,"7",Hurricanes,Chiefs
+"0218ad8e-f725-47ed-a1e4-68ba0cfc422d","2022",Super Rugby Pacific,2022-04-08 07:05:00.000,"8",Highlanders,Moana Pasifika
+"672c5e1b-ccd0-4be3-9308-71d44865eb6d","2022",Super Rugby Pacific,2022-04-08 09:45:00.000,"8",Western Force,Melbourne Rebels
+a8ccb5c3-630f-4a3c-ac35-802cf6d71663,"2022",Super Rugby Pacific,2022-04-09 04:35:00.000,"8",Hurricanes,Crusaders
+"4bd21810-27df-47ce-9d6f-23d9de884f87","2022",Super Rugby Pacific,2022-04-09 07:05:00.000,"8",Chiefs,Blues
+fc406646-2a3d-470a-8463-939e2a93a1e7,"2022",Super Rugby Pacific,2022-04-09 09:45:00.000,"8",Fijian Drua,Brumbies
+"7cd59c7f-6535-4e46-9960-eeebe2b4d805","2022",Super Rugby Pacific,2022-04-12 07:05:00.000,"9",Hurricanes,Moana Pasifika
+"1fd674ac-7787-4052-9f4e-aaf5f43d945a","2022",Super Rugby Pacific,2022-04-15 07:05:00.000,"9",Crusaders,Blues
+c6cd13a3-86b8-42ca-bc4d-3f7f55ce71cf,"2022",Super Rugby Pacific,2022-04-15 09:45:00.000,"9",Melbourne Rebels,Reds
+"7499f735-c0ec-47f3-9615-2f3d3b36cad2","2022",Super Rugby Pacific,2022-04-16 04:35:00.000,"9",Chiefs,Moana Pasifika
+"3cbd17e8-f308-4fa2-99a8-1ea39f256b97","2022",Super Rugby Pacific,2022-04-16 07:05:00.000,"9",Highlanders,Hurricanes
+"7f9ae479-9e85-420f-864a-984266772c27","2022",Super Rugby Pacific,2022-04-16 09:45:00.000,"9",Western Force,NSW Waratahs
+"2e005bb8-d9ef-48fe-934c-cdea37d090b2","2022",Super Rugby Pacific,2022-04-22 09:00:00.000,"10",Chiefs,NSW Waratahs
+ca7c08d4-1e62-4494-b5c2-dbee56323440,"2022",Super Rugby Pacific,2022-04-23 07:05:00.000,"10",Blues,Fijian Drua
+"09017ce1-e335-4efd-bd5b-9ed8332651d4","2022",Super Rugby Pacific,2022-04-23 09:45:00.000,"10",Hurricanes,Reds
+fbdd8953-6965-4178-afbf-9a47eb21221d,"2022",Super Rugby Pacific,2022-04-24 04:00:00.000,"10",Highlanders,Brumbies
+"048908a1-a4d3-4c53-a302-3cba457a3013","2022",Super Rugby Pacific,2022-04-24 06:30:00.000,"10",Crusaders,Melbourne Rebels
+"94ed6a05-2285-4769-a0b8-4121ecefc1e8","2022",Super Rugby Pacific,2022-04-29 09:45:00.000,"11",Reds,Chiefs
+"28d8afd2-09d1-4de1-a2c1-68f6f654ca28","2022",Super Rugby Pacific,2022-04-29 12:00:00.000,"11",Western Force,Blues
+"006366ac-5a72-4cd4-97ff-30c4d618363d","2022",Super Rugby Pacific,2022-04-30 04:35:00.000,"11",Fijian Drua,Highlanders
+"8868455c-222a-4bda-85a0-969235f08e36","2022",Super Rugby Pacific,2022-04-30 07:05:00.000,"11",NSW Waratahs,Crusaders
+"831d2fc5-9966-49d7-bd3d-c5010151ba78","2022",Super Rugby Pacific,2022-04-30 09:45:00.000,"11",Melbourne Rebels,Moana Pasifika
+"9ee29f06-ccd9-4a8f-9026-87a1084d4fad","2022",Super Rugby Pacific,2022-05-01 04:00:00.000,"11",Brumbies,Hurricanes
+"81e751c8-7aee-4450-b169-235a897762b3","2022",Super Rugby Pacific,2022-05-06 07:05:00.000,"12",Blues,Melbourne Rebels
+c3918a9a-4cd2-448e-a59c-4daad4cbdc1c,"2022",Super Rugby Pacific,2022-05-06 09:45:00.000,"12",Reds,Highlanders
+"2cfb8d0b-6879-4edc-9aa0-83182d924d44","2022",Super Rugby Pacific,2022-05-07 04:35:00.000,"12",Moana Pasifika,NSW Waratahs
+c2e57eb7-e079-4e92-b88c-b2a54abac151,"2022",Super Rugby Pacific,2022-05-07 07:05:00.000,"12",Chiefs,Brumbies
+"95a23e5c-524e-4b19-afae-35c719450376","2022",Super Rugby Pacific,2022-05-07 09:45:00.000,"12",Western Force,Crusaders
+e9ce9767-01ac-46da-bf8e-adcdd064b8cf,"2022",Super Rugby Pacific,2022-05-08 03:35:00.000,"12",Hurricanes,Fijian Drua
+"95204def-9b3a-4502-9407-1198a085c1ee","2022",Super Rugby Pacific,2022-05-13 07:05:00.000,"13",Highlanders,Western Force
+ec6801b5-e49e-4e0e-b968-0e3f86e75143,"2022",Super Rugby Pacific,2022-05-13 09:45:00.000,"13",Brumbies,Crusaders
+bb5d356d-8851-4e23-8b03-6c21dd402da6,"2022",Super Rugby Pacific,2022-05-14 04:35:00.000,"13",Fijian Drua,Moana Pasifika
+"38519fa5-6b6d-4ad5-880f-bb21a339b030","2022",Super Rugby Pacific,2022-05-14 07:05:00.000,"13",Blues,Reds
+"327f191f-8901-4547-9259-aed5274969d8","2022",Super Rugby Pacific,2022-05-14 09:45:00.000,"13",NSW Waratahs,Hurricanes
+"66d03854-f310-4ed8-bd56-8252dbf9d373","2022",Super Rugby Pacific,2022-05-15 04:00:00.000,"13",Melbourne Rebels,Chiefs
+d40ed8c5-b6c1-49fc-865f-28d27cc25b52,"2022",Super Rugby Pacific,2022-05-20 07:05:00.000,"14",Crusaders,Fijian Drua
+"18fb588f-c0b2-43c5-862d-d38ae7bffa60","2022",Super Rugby Pacific,2022-05-20 09:45:00.000,"14",Reds,Moana Pasifika
+e212efd4-7f97-4041-88a7-d94838ccf249,"2022",Super Rugby Pacific,2022-05-21 04:35:00.000,"14",Chiefs,Western Force
+"1e8e08b5-a648-4c9c-84d7-fa622ce8a88c","2022",Super Rugby Pacific,2022-05-21 07:05:00.000,"14",Hurricanes,Melbourne Rebels
+"02e317ed-1ac0-41a8-bb11-e48596830ffa","2022",Super Rugby Pacific,2022-05-21 09:45:00.000,"14",Brumbies,Blues
+"744281d6-120d-49fc-bf3b-812f2f0f2a9f","2022",Super Rugby Pacific,2022-05-22 03:35:00.000,"14",Highlanders,NSW Waratahs
+a17460ee-f889-4682-b2ad-e0b73de1424b,"2022",Super Rugby Pacific,2022-05-24 07:05:00.000,"15",Moana Pasifika,Western Force
+"3357cea7-3e3a-41d0-b48e-638d3574e841","2022",Super Rugby Pacific,2022-05-27 07:35:00.000,"15",Crusaders,Reds
+"060e7b83-56a0-4634-b753-6767604bba88","2022",Super Rugby Pacific,2022-05-28 03:00:00.000,"15",Fijian Drua,Chiefs
+"80fb41c3-cf6a-4fd5-bd58-e78d9f60aa0c","2022",Super Rugby Pacific,2022-05-28 07:05:00.000,"15",Moana Pasifika,Brumbies
+"180aceb8-e3d4-4731-9a8f-c7b1b5c46759","2022",Super Rugby Pacific,2022-05-28 09:45:00.000,"15",NSW Waratahs,Blues
+b5b0d995-fe67-4ff7-a129-8792340c2f22,"2022",Super Rugby Pacific,2022-05-28 12:00:00.000,"15",Western Force,Hurricanes
+"487c6611-e937-4e68-ad63-b0f65fd61dc9","2022",Super Rugby Pacific,2022-05-29 04:00:00.000,"15",Melbourne Rebels,Highlanders
+b1f7c1e6-24d9-4ed9-ac17-dcf715cf53e7,"2022",Super Rugby Pacific,2022-06-03 07:05:00.000,"16",Crusaders,Reds
+"9eca81dc-3f29-4021-a179-de8861c3d4c0","2022",Super Rugby Pacific,2022-06-04 04:35:00.000,"16",Chiefs,NSW Waratahs
+"3276852b-09ea-4d30-8085-477cdfd07c15","2022",Super Rugby Pacific,2022-06-04 07:05:00.000,"16",Blues,Highlanders
+"011dfa6d-d5c5-41bd-aee7-d3a94cf79564","2022",Super Rugby Pacific,2022-06-04 09:45:00.000,"16",Brumbies,Hurricanes
+"2847297b-962c-4b11-8e25-acdf2af21ba1","2022",Super Rugby Pacific,2022-06-10 07:05:00.000,"17",Crusaders,Chiefs
+"621472be-d124-425f-8116-663c5c2d0f6b","2022",Super Rugby Pacific,2022-06-11 07:05:00.000,"17",Blues,Brumbies
+b50c31f0-24a9-44c8-8cfe-ed3147364939,"2022",Super Rugby Pacific,2022-06-18 07:05:00.000,"18",Blues,Crusaders
