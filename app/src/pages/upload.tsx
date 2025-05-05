@@ -41,7 +41,7 @@ export default function UploadPage() {
       setMessage('File uploaded and processed successfully!');
       
       // Redirect to the fixtures page after successful upload
-      router.push('/fixtures');
+      router.push('/data');
     } catch (error) {
       setMessage('Error uploading file: ' + (error as Error).message);
     } finally {
