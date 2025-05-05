@@ -17,8 +17,12 @@ export interface Fixture {
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<Fixture[]>([]);
-  const [selectedFixture, setSelectedFixture] = useState<Fixture | null>(null);
+  const [expandedFixtureId, setExpandedFixtureId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  const toggleExpand = (fixtureId: string) => {
+    setExpandedFixtureId(expandedFixtureId === fixtureId ? null : fixtureId);
+  };
 
   useEffect(() => {
     const searchFixtures = async () => {
@@ -74,25 +78,77 @@ export default function SearchPage() {
             {searchResults.map((fixture) => (
               <div
                 key={fixture._id}
-                onClick={() => setSelectedFixture(fixture)}
-                className="result-item"
+                className={`result-item ${expandedFixtureId === fixture._id ? 'expanded' : ''}`}
               >
-                <div className="teams">
-                  <div className="team-names">
-                    <span>{fixture.home_team}</span>
-                    <span className="vs">vs</span>
-                    <span>{fixture.away_team}</span>
+                <div 
+                  className="result-header"
+                  onClick={() => toggleExpand(fixture._id)}
+                >
+                  <div className="teams">
+                    <div className="team-names">
+                      <span>{fixture.home_team}</span>
+                      <span className="vs"> vs </span>
+                      <span>{fixture.away_team}</span>
+                    </div>
+                    <span className="date">
+                      {new Date(fixture.fixture_datetime).toLocaleString('en-GB', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        hour12: false
+                      })}
+                    </span>
                   </div>
-                  <span className="date">
-                    {new Date(fixture.fixture_datetime).toLocaleString('en-GB', {
+                  <div className="expand-arrow">
+                    <svg 
+                      className={expandedFixtureId === fixture._id ? 'expanded' : ''}
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </div>
+                
+                <div className="expanded-content">
+                  <div className="teams-grid">
+                    <div className="team-info">
+                      <h3>Home Team</h3>
+                      <p>{fixture.home_team}</p>
+                    </div>
+                    <div className="team-info">
+                      <h3>Away Team</h3>
+                      <p>{fixture.away_team}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="date-info">
+                    <h3>Date Time</h3>
+                    <p>{new Date(fixture.fixture_datetime).toLocaleString('en-GB', {
                       day: '2-digit',
                       month: '2-digit',
                       year: 'numeric',
                       hour: '2-digit',
                       minute: '2-digit',
                       hour12: false
-                    })}
-                  </span>
+                    })}</p>
+                  </div>
+
+                  {Object.entries(fixture)
+                    .filter(([key]) => !['_id', 'home_team', 'away_team', 'fixture_datetime'].includes(key))
+                    .map(([key, value]) => (
+                      <div key={key} className="additional-info">
+                        <h3>{key}</h3>
+                        <p>
+                          {typeof value === 'object'
+                            ? JSON.stringify(value)
+                            : value}
+                        </p>
+                      </div>
+                    ))}
                 </div>
               </div>
             ))}
@@ -105,62 +161,6 @@ export default function SearchPage() {
           </div>
         )}
       </div>
-
-      {selectedFixture && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h2>Fixture Details</h2>
-              <button
-                onClick={() => setSelectedFixture(null)}
-                className="close-button"
-              >
-                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="modal-body">
-              <div className="teams-grid">
-                <div className="team-info">
-                  <h3>Home Team</h3>
-                  <p>{selectedFixture.home_team}</p>
-                </div>
-                <div className="team-info">
-                  <h3>Away Team</h3>
-                  <p>{selectedFixture.away_team}</p>
-                </div>
-              </div>
-              
-              <div className="date-info">
-                <h3>Date Time</h3>
-                <p>{new Date(selectedFixture.fixture_datetime).toLocaleString('en-GB', {
-                  day: '2-digit',
-                  month: '2-digit',
-                  year: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit',
-                  hour12: false
-                })}</p>
-              </div>
-
-              {Object.entries(selectedFixture)
-                .filter(([key]) => !['_id', 'home_team', 'away_team', 'fixture_datetime'].includes(key))
-                .map(([key, value]) => (
-                  <div key={key} className="additional-info">
-                    <h3>{key}</h3>
-                    <p>
-                      {typeof value === 'object'
-                        ? JSON.stringify(value)
-                        : value}
-                    </p>
-                  </div>
-                ))}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 } 

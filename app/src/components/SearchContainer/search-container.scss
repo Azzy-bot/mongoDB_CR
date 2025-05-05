@@ -61,29 +61,80 @@
         border: 1px solid #e5e7eb;
         border-radius: 0.5rem;
         cursor: pointer;
+        transition: all 0.3s ease;
         
         &:hover {
           background-color: #f9fafb;
         }
 
-        .teams {
+        .result-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          cursor: pointer;
 
-          .team-names {
-            span {
-              font-weight: 500;
+          .expand-arrow {
+            svg {
+              width: 1.5rem;
+              height: 1.5rem;
+              transition: transform 0.3s ease;
               
-              &.vs {
-                margin: 0 0.5rem;
+              &.expanded {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        .expanded-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+          margin-top: 0;
+          opacity: 0;
+          
+          .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+
+            .team-info {
+              h3 {
+                font-weight: 500;
+                color: #6b7280;
+                font-size: 0.875rem;
+                margin-bottom: 0.25rem;
+              }
+
+              p {
+                font-size: 1rem;
               }
             }
           }
 
-          .date {
-            font-size: 0.875rem;
-            color: #6b7280;
+          .date-info, .additional-info {
+            margin-top: 1rem;
+            
+            h3 {
+              font-weight: 500;
+              color: #6b7280;
+              font-size: 0.875rem;
+              margin-bottom: 0.25rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &.expanded {
+          .expanded-content {
+            max-height: 1000px;
+            opacity: 1;
           }
         }
       }
