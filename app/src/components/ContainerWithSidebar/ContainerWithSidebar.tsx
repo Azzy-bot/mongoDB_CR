@@ -15,7 +15,6 @@ interface SidebarLink {
 export const DefaultSidebarLinks: Array<SidebarLink> = [
     { path: '/upload', name: 'Upload' },
     { path: '/search', name: 'Search' },
-    { path: '/data', name: 'View Data'},
 ];
 
 export function ContainerWithSidebar({ children }: PropsWithChildren<AppContainerProps>): JSX.Element {
