@@ -1,6 +1,8 @@
+'use client';
+
 import { useState } from 'react';
-import { useRouter } from 'next/router';
-import client from '../lib/mongodb';
+import { useRouter } from 'next/navigation';
+import client from '@/src/lib/mongodb';
 
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);

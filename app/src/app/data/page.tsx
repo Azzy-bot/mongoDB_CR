@@ -1,5 +1,4 @@
-import { GetServerSideProps } from 'next';
-import client from '../lib/mongodb';
+import client from '@/src/lib/mongodb';
 
 interface Fixture {
   _id: string;
@@ -9,12 +8,7 @@ interface Fixture {
   [key: string]: any;
 }
 
-interface DataPageProps {
-  fixtures: Fixture[];
-  error?: string;
-}
-
-export const getServerSideProps: GetServerSideProps<DataPageProps> = async () => {
+async function getFixtures() {
   try {
     if (!client) {
       throw new Error('MongoDB client is not initialized');
@@ -28,22 +22,21 @@ export const getServerSideProps: GetServerSideProps<DataPageProps> = async () =>
       .toArray();
 
     return {
-      props: {
-        fixtures: JSON.parse(JSON.stringify(fixtures)),
-      },
+      fixtures: JSON.parse(JSON.stringify(fixtures)) as Fixture[],
+      error: null
     };
   } catch (e) {
     console.error('Error fetching data:', e);
     return {
-      props: {
-        fixtures: [],
-        error: e instanceof Error ? e.message : 'An error occurred while fetching data',
-      },
+      fixtures: [] as Fixture[],
+      error: e instanceof Error ? e.message : 'An error occurred while fetching data'
     };
   }
-};
+}
 
-export default function DataPage({ fixtures, error }: DataPageProps) {
+export default async function DataPage() {
+  const { fixtures, error } = await getFixtures();
+
   if (error) {
     return (
       <div className="min-h-screen p-8">
@@ -92,8 +85,8 @@ export default function DataPage({ fixtures, error }: DataPageProps) {
 
   // Get all unique keys from the fixtures
   const headers = Array.from(
-    new Set(fixtures.flatMap(fixture => Object.keys(fixture)))
-  ).filter(key => key !== '_id');
+    new Set(fixtures.flatMap((fixture: Fixture) => Object.keys(fixture)))
+  ).filter(key => key !== '_id') as string[];
 
   return (
     <div className="min-h-screen p-8">
@@ -111,7 +104,7 @@ export default function DataPage({ fixtures, error }: DataPageProps) {
             </tr>
           </thead>
           <tbody>
-            {fixtures.map(fixture => (
+            {fixtures.map((fixture: Fixture) => (
               <tr key={fixture._id} className="hover:bg-gray-50">
                 <td className="px-4 py-2 border-b">{fixture._id}</td>
                 {headers.map(header => (
@@ -128,4 +121,4 @@ export default function DataPage({ fixtures, error }: DataPageProps) {
       </div>
     </div>
   );
-} 
+}
