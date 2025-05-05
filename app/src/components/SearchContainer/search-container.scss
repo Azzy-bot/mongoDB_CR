@@ -1,0 +1,239 @@
+.search-container {
+  min-height: 100vh;
+  padding: 2rem;
+
+  .search-header {
+    max-width: 42rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        
+        &:focus {
+          outline: none;
+          ring: 2px;
+          ring-color: #3b82f6;
+        }
+      }
+
+      .loading-spinner {
+        position: absolute;
+        right: 0.75rem;
+        top: 0.625rem;
+        
+        .spinner {
+          animation: spin 1s linear infinite;
+          border-radius: 9999px;
+          height: 1.25rem;
+          width: 1.25rem;
+          border-bottom-width: 2px;
+          border-color: #3b82f6;
+        }
+      }
+    }
+  }
+
+  .search-wrapper {
+    max-width: 42rem;
+    margin: 0 auto;
+
+    .results-container {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .result-item {
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: #f9fafb;
+        }
+
+        .result-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          cursor: pointer;
+
+          .expand-arrow {
+            svg {
+              width: 1.5rem;
+              height: 1.5rem;
+              transition: transform 0.3s ease;
+              
+              &.expanded {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+
+        .expanded-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+          margin-top: 0;
+          opacity: 0;
+          
+          .teams-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+
+            .team-info {
+              h3 {
+                font-weight: 500;
+                color: #6b7280;
+                font-size: 0.875rem;
+                margin-bottom: 0.25rem;
+              }
+
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          .date-info, .additional-info {
+            margin-top: 1rem;
+            
+            h3 {
+              font-weight: 500;
+              color: #6b7280;
+              font-size: 0.875rem;
+              margin-bottom: 0.25rem;
+            }
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &.expanded {
+          .expanded-content {
+            max-height: 1000px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .no-results {
+      margin-top: 1rem;
+      text-align: center;
+      color: #6b7280;
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    .modal-content {
+      background-color: white;
+      border-radius: 0.5rem;
+      max-width: 42rem;
+      width: 100%;
+      padding: 1.5rem;
+
+      .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+
+        h2 {
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+
+        .close-button {
+          color: #6b7280;
+          
+          &:hover {
+            color: #374151;
+          }
+
+          svg {
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+        }
+      }
+
+      .modal-body {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .teams-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+
+          .team-info {
+            h3 {
+              font-weight: 500;
+              color: #6b7280;
+            }
+
+            p {
+              font-size: 1.125rem;
+            }
+          }
+        }
+
+        .date-info {
+          h3 {
+            font-weight: 500;
+            color: #6b7280;
+          }
+        }
+
+        .additional-info {
+          h3 {
+            font-weight: 500;
+            color: #6b7280;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
