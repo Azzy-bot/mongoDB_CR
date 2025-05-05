@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import client from '@/src/lib/mongodb';
 
 export default function UploadPage() {
   const [file, setFile] = useState<File | null>(null);
@@ -61,6 +60,8 @@ export default function UploadPage() {
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Select CSV File
             </label>
+            <br />
+            <br />
             <input
               type="file"
               accept=".csv"
@@ -73,6 +74,7 @@ export default function UploadPage() {
                 hover:file:bg-blue-100"
             />
           </div>
+          <br />
 
           <button
             type="submit"
