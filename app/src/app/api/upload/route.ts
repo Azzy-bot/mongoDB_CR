@@ -4,6 +4,16 @@ import client from '@/src/lib/mongodb';
 import { Readable } from 'stream';
 import { Document } from 'mongodb';
 
+interface FixtureRecord extends Document {
+  fixture_mid: string;
+  season: number;
+  competition_name: string;
+  fixture_datetime: Date;
+  fixture_round: string;
+  home_team: string;
+  away_team: string;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
@@ -20,17 +30,23 @@ export async function POST(request: NextRequest) {
     const csvContent = Buffer.from(buffer).toString();
 
     // Parse CSV content
-    const records = await new Promise<Document[]>((resolve, reject) => {
+    const records = await new Promise<FixtureRecord[]>((resolve, reject) => {
       const parser = parse(csvContent, {
         columns: true,
         skip_empty_lines: true,
       });
       
-      const parsedRecords: Document[] = [];
+      const parsedRecords: FixtureRecord[] = [];
       parser.on('readable', () => {
         let record;
         while ((record = parser.read()) !== null) {
-          parsedRecords.push(record as Document);
+          // Transform the data
+          const transformedRecord: FixtureRecord = {
+            ...record,
+            season: parseInt(record.season, 10),
+            fixture_datetime: new Date(record.fixture_datetime)
+          };
+          parsedRecords.push(transformedRecord);
         }
       });
       
@@ -48,12 +64,30 @@ export async function POST(request: NextRequest) {
     const db = client.db();
     const collection = db.collection('fixtures');
 
-    // Insert the records into MongoDB
-    const result = await collection.insertMany(records);
+    // Create unique index on fixture_mid if it doesn't exist
+    try {
+      await collection.createIndex({ fixture_mid: 1 }, { unique: true });
+    } catch (error) {
+      // Index might already exist, which is fine
+      console.log('Index creation skipped (might already exist)');
+    }
+
+    // Use updateMany with upsert to handle duplicates
+    const operations = records.map(record => ({
+      updateOne: {
+        filter: { fixture_mid: record.fixture_mid },
+        update: { $set: record },
+        upsert: true
+      }
+    }));
+
+    const result = await collection.bulkWrite(operations);
 
     return NextResponse.json({
       message: 'File uploaded and processed successfully',
-      insertedCount: result.insertedCount,
+      insertedCount: result.upsertedCount,
+      modifiedCount: result.modifiedCount,
+      matchedCount: result.matchedCount
     });
   } catch (error) {
     console.error('Error processing upload:', error);
